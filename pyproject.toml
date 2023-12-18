@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[tool.poetry]
+name = "myproject"
+version = "0.1.0"
+description = "Apexive"
+authors = ["junaidrafique69@gmail.com"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.10.11"
+django = "^5.0"
+
+[tool.poetry.dev-dependencies]
+# Add your development dependencies here, such as testing libraries, pre-commit, etc.
+pre-commit = "^2.15.0"
+
+[tool.pre-commit]
+# Pre-commit configuration
+repos = [
+  "https://github.com/pre-commit/pre-commit-hooks",
+  # Add other pre-commit hooks as needed
+]
+
+# Example pre-commit hook configuration
+[tool.pre-commit.hook_types]
+black = "black"
+flake8 = "flake8"
+isort = "isort"
